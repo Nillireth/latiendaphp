@@ -20,9 +20,9 @@ Route::get('/', function () {
 Route::get('Paises',function()
 {
     $Paises = [
-        "Colombia" => ["Capital" => "Bogota", "Moneda" => "Peso", "Poblacion" => 51.6, "Ciudades" => "Cali", "Medellin", "Barranquilla"],
-         "Peru" => ["Capital" => "Lima", "Moneda" => "Sol", "Poblacion" =>  32.6, "Ciudades" => "Cusco", "Chiclayo", "Piura", "Tacna"],
-         "Paraguay" => ["Capital" => "Asuncion", "Moneda" => "Guarani", "Poblacion" => 7.453, "Ciudades" => "Ciudad del Este", "Encarnacion"]
+        "Colombia" => ["Capital" => "Bogota", "Moneda" => "Peso", "Poblacion" => 51.6, "Ciu" => ["Cali", "Medellin", "Barranquilla"]],
+         "Peru" => ["Capital" => "Lima", "Moneda" => "Sol", "Poblacion" =>  32.6, "Ciu" => ["Cusco", "Chiclayo", "Piura", "Tacna"]],
+         "Paraguay" => ["Capital" => "Asuncion", "Moneda" => "Guarani", "Poblacion" => 7.453, "Ciu" => ["Ciudad del Este", "Encarnacion"]]
         ];
 
         

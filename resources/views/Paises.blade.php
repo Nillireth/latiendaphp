@@ -10,9 +10,9 @@
 <body>
     <h1>PAISES DE LA REGIÓN</h1>
     <br>
-    <table class="table table-striped">
-        <thead>
-            <tr>
+    <table class="table table-bordered">
+        <thead >
+            <tr  class="table-info">
                 <th>Pais</th>
                 <th>Capital</th>
                 <th>Moneda</th>
@@ -23,14 +23,13 @@
         <tbody> 
             @foreach($Paises as $pais => $infopais)
             <tr>
-                <td rowspan="{{count$infopais['Ciudad'])}}">{{$pais}}</td>
-                <td rowspan="{{count$infopais['Ciudad'])}}">{{$infopais["Capital"]}}</td>
-                <td rowspan="{{count$infopais['Ciudad'])}}">{{$infopais["Moneda"]}}</td>   
-                <td rowspan="{{count$infopais['Ciudad'])}}">{{$infopais["Poblacion"]}} Millones de habitantes</td>
-            
+                <td rowspan="{{count ($infopais['Ciu']) }}">{{$pais}}</td>
+                <td rowspan="{{count ($infopais['Ciu']) }}">{{$infopais["Capital"]}}</td>
+                <td rowspan="{{count ($infopais['Ciu']) }}">{{$infopais["Moneda"]}}</td>   
+                <td rowspan="{{count ($infopais['Ciu']) }}">{{$infopais["Poblacion"]}} Millones de habitantes</td>
 
-                @foreach($infopais ["Ciudades"] as $Ciudad)
-                <td>{{$Ciudad}}</td>
+                @foreach($infopais ["Ciu"] as $ciudad)
+                <td>{{$ciudad}}</td>
             
             </tr>
                 @endforeach 
