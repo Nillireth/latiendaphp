@@ -20,52 +20,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Paises', function (){
+Route::get('Paises',function()
+{
+    $Paises = [
+        "Colombia" => ["Capital" => "Bogota", "Moneda" => "Peso", "Poblacion" => 51.6, "Ciu" => ["Cali", "Medellin", "Barranquilla"]],
+         "Peru" => ["Capital" => "Lima", "Moneda" => "Sol", "Poblacion" =>  32.6, "Ciu" => ["Cusco", "Chiclayo", "Piura", "Tacna"]],
+         "Paraguay" => ["Capital" => "Asuncion", "Moneda" => "Guarani", "Poblacion" => 7.453, "Ciu" => ["Ciudad del Este", "Encarnacion"]]
+        ];
 
-    $Paises =[
-        "Colombia"  => [
-            "cap"   => "Bogotá",
-            "mon"   => "Peso",
-            "pob"   => 51,
-            "ciu"   => [
-                    "Medellin",
-                    "Cali",
-                    "Pereira"
-            ]
-        ],
-
-        "Ecuador"   =>[
-            "cap"   => "Quito",
-            "mon"   => "Dolar",
-            "pob"   => 20,
-            "ciu"   => [
-                    "Cuenca",
-                    "Guayaquil"
-                 
-            ]
-             
         
-            ],
-
-            "Brasil"   =>[
-                "cap"   => "Brasilia",
-                "mon"   => "Real",
-                "pob"   => 21,
-                "ciu"   => [
-                        "
-                        ",
-                        "Guayaquil"
-                     
-                ]
-                 
-            
-                ],
-    ];   
-    
-    return view ('Paises')
-    -> with( 'Paises', $Paises);
-
-}); 
+        //Mostrar vista de paises)
+        return view("Paises")->with("Paises", $Paises);
+});
 
 Route::get('prueba', function(){
     //Seleccionar todas las marcas
